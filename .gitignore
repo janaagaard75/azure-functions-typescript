@@ -1,2 +1,8 @@
+# Built files, ready for distrubtion.
+/dist/
+
+# Node modules.
 /node_modules/
+
+# Log files.
 *.log

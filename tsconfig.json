@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": [
+      "es2017"
+    ],
+    "module": "es2015",
+    "moduleResolution": "node",
+    "strict": true,
+    "target": "es2017"
+  },
+  "exclude": [
+    "dist",
+    "node_modules"
+  ]
+}

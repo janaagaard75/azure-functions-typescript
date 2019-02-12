@@ -1,0 +1,24 @@
+{
+  "name": "azure-functions-typescript",
+  "version": "1.0.0",
+  "description": "Azure Function written in TypeScript",
+  "repository": "https://github.com/janaagaard75/azure-functions-typescript.git",
+  "author": "Jan Aagaard <jan@aagaard.net>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "clean": "rm -rf dist",
+    "prebuild": "yarn install --frozen-lockfile",
+    "build": "webpack",
+    "prestart": "yarn run build",
+    "start": "(cd dist; func host start)"
+  },
+  "devDependencies": {
+    "@types/node": "10.*.*",
+    "copy-webpack-plugin": "4.6.0",
+    "ts-loader": "5.3.3",
+    "typescript": "3.3.3",
+    "webpack": "4.29.3",
+    "webpack-cli": "3.2.3"
+  }
+}

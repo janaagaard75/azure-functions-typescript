@@ -8,5 +8,19 @@
   "files.exclude": {
     "obj": true,
     "bin": true
-  }
+  },
+  "spellright.documentTypes": [
+    "latex",
+    "markdown",
+    "plaintext",
+    "typescript"
+  ],
+  "spellright.ignoreFiles": [
+    "**/.gitignore",
+    "**/.spellignore",
+    "yarn.lock"
+  ],
+  "spellright.language": [
+    "en"
+  ]
 }
