@@ -9,6 +9,12 @@
     "obj": true,
     "bin": true
   },
+  "jest.debugCodeLens.showWhenTestStateIn": [
+    "fail",
+    "pass",
+    "skip",
+    "unknown"
+  ],
   "spellright.documentTypes": [
     "latex",
     "markdown",
@@ -22,5 +28,6 @@
   ],
   "spellright.language": [
     "en"
-  ]
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib",
 }
