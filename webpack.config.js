@@ -6,7 +6,7 @@ module.exports = {
   mode: "development",
   devtool: "inline-source-map",
   entry: {
-    "greet": "./src/greet/index.ts",
+    "greet": "./src/greet/greet.ts",
   },
   output: {
     path: path.resolve(__dirname, "dist"),

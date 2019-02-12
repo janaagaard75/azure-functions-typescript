@@ -33,6 +33,12 @@ Fire up a local Azure Functions environment. This will make the `greet` endpoint
 
     yarn start
 
+TODO: Explain the following commands:
+
+    yarn build
+    yarn clean
+    yarn test
+
 ## Repository Structure
 
 TODO

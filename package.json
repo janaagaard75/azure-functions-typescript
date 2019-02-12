@@ -11,11 +11,15 @@
     "prebuild": "yarn install --frozen-lockfile",
     "build": "webpack",
     "prestart": "yarn run build",
-    "start": "(cd dist; func host start)"
+    "start": "(cd dist; func host start)",
+    "test": "jest"
   },
   "devDependencies": {
+    "@types/jest": "24.0.1",
     "@types/node": "10.*.*",
     "copy-webpack-plugin": "4.6.0",
+    "jest": "24.1.0",
+    "ts-jest": "23.10.5",
     "ts-loader": "5.3.3",
     "typescript": "3.3.3",
     "webpack": "4.29.3",
