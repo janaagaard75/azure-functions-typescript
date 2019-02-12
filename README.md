@@ -52,3 +52,15 @@ TODO
 
 - Add the folder with the `function.json` file.
 - Add the function to `webpack.config.js`.
+
+## To Do
+
+- Continuous deployment to Azure through CircleCI.
+- Add a tests that checks the endpoint on Azure.
+- Run tests as part of the pipeline.
+- Move some logic to an external file.
+- Use a Node module.
+- Add type definitions.
+- Recommended extensions.
+- Prettier.
+- TSLint?
