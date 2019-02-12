@@ -64,3 +64,4 @@ TODO
 - Recommended extensions.
 - Prettier.
 - TSLint?
+- Protect the master branch?
