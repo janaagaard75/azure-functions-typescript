@@ -5,5 +5,8 @@
   "repository": "https://github.com/janaagaard75/azure-functions-typescript.git",
   "author": "Jan Aagaard <jan@aagaard.net>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "scripts": {
+    "start": "func host start"
+  }
 }

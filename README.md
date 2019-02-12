@@ -23,4 +23,4 @@ The `func` command.
 
 Fire up a local Azure Functions environment. This will make the `greet` endpoint available at <http://localhost:7071/api/greet>.
 
-    func host start
+    yarn start
