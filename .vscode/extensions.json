@@ -1,5 +1,7 @@
 {
   "recommendations": [
-    "ms-azuretools.vscode-azurefunctions"
+    "editorconfig.editorconfig",
+    "ms-azuretools.vscode-azurefunctions",
+    "orta.vscode-jest"
   ]
 }
