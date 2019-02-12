@@ -6,7 +6,7 @@ module.exports = {
   mode: "development",
   devtool: "inline-source-map",
   entry: {
-    "greet": "./greet/index.ts",
+    "greet": "./src/greet/index.ts",
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -26,10 +26,12 @@ module.exports = {
   },
   plugins: [
     new copyWebpackPlugin([
-      "host.json",
-      "local.settings.json",
-      "greet/function.json",
-      "greet/sample.dat"
+      "src/host.json",
+      "src/local.settings.json",
+      {
+        context: "src",
+        from: '**/+(function.json|sample.dat)'
+      }
     ])
   ]
 }
