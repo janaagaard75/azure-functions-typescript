@@ -7,6 +7,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
+    "clean": "rm -rf dist",
     "prebuild": "yarn install --frozen-lockfile",
     "build": "webpack",
     "prestart": "yarn run build",
