@@ -13,6 +13,12 @@ Azure Functions require and LTS version of Node.js, that is a version with an ev
     brew install node@10
     brew link node@10 --overwrite --force
 
+### Yarn
+
+Yarn is a better npm. I am especially a fan of the really fast installs on a system that is up to date, because this allows you to always run `yarn install` before building, making sure that you are using the correct versions of the Node modules.
+
+    brew install yarn
+
 ### Azure Function Core Tools
 
 The `func` command.

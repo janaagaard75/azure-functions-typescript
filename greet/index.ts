@@ -1,4 +1,4 @@
-module.exports = async function (context, req) {
+export async function run(context, req) {
   if (req.query.name || (req.body && req.body.name)) {
     context.res = {
       // status: 200, /* Defaults to 200 */
