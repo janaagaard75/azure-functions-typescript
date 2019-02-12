@@ -1,8 +1,9 @@
 export async function run(context: any, request: any) {
-  if (request.query.name || (request.body && request.body.name)) {
+  const name = getName(request);
+  if (name) {
     return {
       // status: 200, /* Defaults to 200 */
-      body: "Hello " + (request.query.name || request.body.name)
+      body: "Hello " + name
     };
   }
   else {
@@ -12,3 +13,15 @@ export async function run(context: any, request: any) {
     };
   }
 };
+
+function getName(request: any): string {
+  if (request.query.name) {
+    return request.query.name;
+  }
+
+  if (request.body && request.body.name) {
+    return request.body.name;
+  }
+
+  return ""
+}
