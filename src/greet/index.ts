@@ -1,8 +1,8 @@
-export async function run(context: any, req: any) {
-  if (req.query.name || (req.body && req.body.name)) {
+export async function run(context: any, request: any) {
+  if (request.query.name || (request.body && request.body.name)) {
     context.res = {
       // status: 200, /* Defaults to 200 */
-      body: "Hello " + (req.query.name || req.body.name)
+      body: "Hello " + (request.query.name || request.body.name)
     };
   }
   else {
