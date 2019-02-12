@@ -8,7 +8,6 @@ export async function run(context: any, request: any) {
   }
 
   return {
-    // status: 200, /* Defaults to 200 */
     body: `Hello ${name}.`
   };
 };
