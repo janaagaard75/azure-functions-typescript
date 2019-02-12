@@ -1,0 +1,9 @@
+{
+  "name": "azure-functions-typescript",
+  "version": "1.0.0",
+  "description": "Azure Function written in TypeScript",
+  "repository": "https://github.com/janaagaard75/azure-functions-typescript.git",
+  "author": "Jan Aagaard <jan@aagaard.net>",
+  "license": "MIT",
+  "private": false
+}
