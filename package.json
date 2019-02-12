@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "@types/node": "10.*.*",
+    "copy-webpack-plugin": "4.6.0",
     "ts-loader": "5.3.3",
     "typescript": "3.3.3",
     "webpack": "4.29.3",

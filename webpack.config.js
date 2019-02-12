@@ -1,3 +1,4 @@
+const copyWebpackPlugin = require("copy-webpack-plugin")
 const path = require("path")
 
 module.exports = {
@@ -22,5 +23,13 @@ module.exports = {
         use: "ts-loader"
       }
     ]
-  }
+  },
+  plugins: [
+    new copyWebpackPlugin([
+      "host.json",
+      "local.settings.json",
+      "greet/function.json",
+      "greet/sample.dat"
+    ])
+  ]
 }
