@@ -1,4 +1,4 @@
-export async function run(context, req) {
+export async function run(context: any, req: any) {
   if (req.query.name || (req.body && req.body.name)) {
     context.res = {
       // status: 200, /* Defaults to 200 */
