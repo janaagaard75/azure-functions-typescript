@@ -26,8 +26,11 @@ jobs:
 
       - run:
           name: Run tests
-          command: yarn run test
+          command: yarn run test-ci
 
       - run:
           name: Build
           command: yarn run build
+
+      - store_test_results:
+          path: test-results
