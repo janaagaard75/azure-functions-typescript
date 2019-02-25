@@ -55,13 +55,13 @@ TODO
 
 ## To Do
 
-- Continuous deployment to Azure through CircleCI.
-- Add a tests that checks the endpoint on Azure.
-- Run tests as part of the pipeline.
-- Move some logic to an external file.
-- Use a Node module.
 - Add type definitions.
+- Type definition for the functions.
+- Move some logic to an external file.
+- Continuous deployment to Azure through CircleCI.
+- Use a Node module.
 - Recommended extensions.
 - Prettier.
 - TSLint?
 - Protect the master branch?
+- Rollup?
