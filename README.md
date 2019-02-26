@@ -65,3 +65,5 @@ TODO
 - TSLint?
 - Protect the master branch?
 - Rollup?
+- Husky?
+- Danger?
