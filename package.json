@@ -9,6 +9,7 @@
   "scripts": {
     "clean": "rm -rf dist",
     "build": "yarn install --frozen-lockfile && webpack",
+    "lint": "tslint src/**/*.ts",
     "prettify": "prettier --write src/**/*.ts",
     "start": "yarn run build && (cd dist; func host start)",
     "test": "jest",
@@ -25,6 +26,8 @@
     "prettier": "1.16.4",
     "ts-jest": "23.10.5",
     "ts-loader": "5.3.3",
+    "tslint": "5.13.1",
+    "tslint-config-prettier": "1.18.0",
     "typescript": "3.3.3",
     "webpack": "4.29.3",
     "webpack-cli": "3.2.3"
