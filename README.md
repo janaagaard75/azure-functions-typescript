@@ -55,7 +55,6 @@ TODO
 
 ## To Do
 
-- Prettier.
 - TSLint.
 - Move some logic to an external file.
 - Continuous deployment to Azure through CircleCI.
