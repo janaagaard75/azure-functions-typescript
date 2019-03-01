@@ -8,13 +8,10 @@
   "private": false,
   "scripts": {
     "clean": "rm -rf dist",
-    "prebuild": "yarn install --frozen-lockfile",
-    "build": "webpack",
-    "prestart": "yarn run build",
-    "start": "(cd dist; func host start)",
+    "build": "yarn install --frozen-lockfile && webpack",
+    "start": "yarn run build && (cd dist; func host start)",
     "test": "jest",
-    "pretest-ci": "mkdirp test-results",
-    "test-ci": "cross-env JEST_JUNIT_OUTPUT=test-results/unit-tests-results.xml jest --runInBand --ci --reporters=default --reporters=jest-junit"
+    "test-ci": "mkdirp test-results && cross-env JEST_JUNIT_OUTPUT=test-results/unit-tests-results.xml jest --runInBand --ci --reporters=default --reporters=jest-junit"
   },
   "devDependencies": {
     "@azure/functions": "1.0.1-beta2",
