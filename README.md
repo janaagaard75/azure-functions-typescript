@@ -55,11 +55,11 @@ TODO
 
 ## To Do
 
-- Move some logic to an external file.
+- Are source maps needed when running tests? What about when starting a local environment?
 - Continuous deployment to Azure through CircleCI.
-- Use a Node module.
+- Move some logic to an external file as a proof of concept.
+- Use a Node module as a proof of concept.
 - Better type definition for the functions. (HttpResponse is missing.)
-- Protect the master branch?
-- Rollup?
-- Husky?
-- Danger?
+- Protect the master branch? This can only be done once the project has become public.
+- Rollup? Remember to add both Day.js and something else.
+- Pre-commit for Prettier? See <https://prettier.io/docs/en/precommit.html>.
