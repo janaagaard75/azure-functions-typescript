@@ -5,6 +5,7 @@
   "azureFunctions.projectRuntime": "~2",
   "azureFunctions.templateFilter": "Verified",
   "debug.internalConsoleOptions": "neverOpen",
+  "editor.formatOnSave": true,
   "files.exclude": {
     "obj": true,
     "bin": true
