@@ -2,7 +2,7 @@ import { Context } from "@azure/functions"
 import { HttpRequest } from "@azure/functions"
 
 export async function run(context: Context, request: HttpRequest) {
-  const name = getName(request);
+  const name = extractName(request);
   if (!name) {
     return {
       status: 400,
@@ -15,7 +15,7 @@ export async function run(context: Context, request: HttpRequest) {
   };
 };
 
-function getName(request: any): string {
+function extractName(request: any): string {
   if (request.query.name) {
     return request.query.name;
   }
