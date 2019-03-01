@@ -55,13 +55,12 @@ TODO
 
 ## To Do
 
-- Type definition for the functions.
+- Prettier.
+- TSLint.
 - Move some logic to an external file.
 - Continuous deployment to Azure through CircleCI.
 - Use a Node module.
-- Recommended extensions.
-- Prettier.
-- TSLint?
+- Better type definition for the functions. (HttpResponse is missing.)
 - Protect the master branch?
 - Rollup?
 - Husky?
