@@ -1,4 +1,7 @@
-export async function run(context: any, request: any) {
+import { Context } from "@azure/functions"
+import { HttpRequest } from "@azure/functions"
+
+export async function run(context: Context, request: HttpRequest) {
   const name = getName(request);
   if (!name) {
     return {

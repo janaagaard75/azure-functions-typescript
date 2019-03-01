@@ -55,7 +55,6 @@ TODO
 
 ## To Do
 
-- Add type definitions.
 - Type definition for the functions.
 - Move some logic to an external file.
 - Continuous deployment to Azure through CircleCI.
