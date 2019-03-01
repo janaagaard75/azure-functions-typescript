@@ -25,6 +25,10 @@ jobs:
             - ./cache/node_modules
 
       - run:
+          name: Lint
+          command: yarn run lint
+
+      - run:
           name: Run tests
           command: yarn run test-ci
 
