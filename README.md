@@ -10,7 +10,7 @@ The path chosen here is to compile the TypeScript to JavaScript using [Webpack](
 
 ### LTS version of Node.js
 
-Azure Functions require and LTS version of Node.js, that is a version with an even major version number. Node 10 currently the newest LTS version.
+Azure Functions require and LTS version of Node.js, that is a version where the major version number is even. Node 10 currently the newest LTS version.
 
     brew install node@10
     brew link node@10 --overwrite --force
@@ -41,7 +41,7 @@ TODO: Explain the following commands:
 
 ## Repository Structure
 
-TODO
+TODO:
 
 - Mention `src` and `dist`.
 - Explain how files are transformed from one folder structure to the other.
@@ -53,9 +53,8 @@ TODO
 - Add the folder with the `function.json` file.
 - Add the function to `webpack.config.js`.
 
-## To Do
+## TODO
 
-- Are source maps needed when running tests? What about when starting a local environment?
 - Continuous deployment to Azure through CircleCI.
 - Move some logic to an external file as a proof of concept.
 - Use a Node module as a proof of concept.
@@ -63,3 +62,9 @@ TODO
 - Protect the master branch? This can only be done once the project has become public.
 - Rollup? Remember to add both Day.js and something else.
 - Pre-commit for Prettier? See <https://prettier.io/docs/en/precommit.html>.
+
+## Documentation
+
+- Remember `sourceMap: true` in `tsconfig.json`.
+- A note about the recommended extensions.
+- Something about setting up Azure?

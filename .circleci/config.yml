@@ -32,9 +32,25 @@ jobs:
           name: Run tests
           command: yarn run test-ci
 
+      - store_test_results:
+          path: test-results
+
       - run:
           name: Build
           command: yarn run build
 
-      - store_test_results:
-          path: test-results
+      - run:
+          name: Install Azure CLI
+          command: |
+            echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ wheezy main" | \
+              sudo tee /etc/apt/sources.list.d/azure-cli.list
+            curl -L https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+            sudo apt-get install apt-transport-https
+            sudo apt-get update && sudo apt-get install azure-cli
+
+      - run:
+          name: Create or update Azure resources
+          # $continuousdelivery_password is defined in CircleCI as build environment variable.
+          command: |
+            az login -u "continuousdelivery@janaagaardhotmail.onmicrosoft.com" -p "$continuousdelivery_password"
+            ./deployment/create-azure-resources.sh ${CIRCLE_BRANCH}
