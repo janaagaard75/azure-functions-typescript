@@ -29,15 +29,15 @@ jobs:
           command: yarn run lint
 
       - run:
+          name: Build
+          command: yarn run build
+
+      - run:
           name: Run tests
           command: yarn run test-ci
 
       - store_test_results:
           path: test-results
-
-      - run:
-          name: Build
-          command: yarn run build
 
       - run:
           name: Install Azure CLI
