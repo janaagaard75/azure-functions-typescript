@@ -19,8 +19,12 @@ az group create \
 # Create the resources.
 script_folder="$( cd "$(dirname ${BASH_SOURCE[0]})"; pwd -P )"
 template_file=$script_folder/azure-resources-template.json
+now=date +"%Y%m%d-%H%M%S"
 echo "Creating resources in resource group $resource_group_name."
 az group deployment create \
+  --mode Complete \
+  --name "CircleCI-$now" \
   --resource-group $resource_group_name \
+  --rollback-on-error \
   --template-file $template_file \
   --verbose
