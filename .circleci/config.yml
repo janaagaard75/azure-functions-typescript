@@ -58,3 +58,8 @@ jobs:
           name: Create or update Azure resources
           command: |
             ./deployment/create-azure-resources.sh ${CIRCLE_BRANCH}
+
+      - run:
+          name: Publish code to Azure functions
+          command: |
+            ./deployment/publish-to-azure.sh ${CIRCLE_BRANCH}
