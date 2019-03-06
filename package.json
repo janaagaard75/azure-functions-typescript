@@ -10,7 +10,7 @@
     "clean": "rm -rf dist",
     "build": "yarn install --frozen-lockfile && webpack",
     "lint": "tslint src/**/*.ts",
-    "prettify": "prettier --write src/**/*.ts",
+    "prettify": "prettier --write '{./,./src/**/}*.{js,json,ts}'",
     "start": "yarn run build && (cd dist; func host start)",
     "test": "jest",
     "test-ci": "mkdirp test-results && cross-env JEST_JUNIT_OUTPUT=test-results/unit-tests-results.xml jest --runInBand --ci --reporters=default --reporters=jest-junit"
