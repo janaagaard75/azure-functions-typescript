@@ -49,8 +49,12 @@ jobs:
             sudo apt-get update && sudo apt-get install azure-cli
 
       - run:
-          name: Create or update Azure resources
+          name: Sign in to Azure
           # $continuousdelivery_password is defined in CircleCI as build environment variable.
           command: |
             az login -u "continuousdelivery@janaagaardhotmail.onmicrosoft.com" -p "$continuousdelivery_password"
+
+      - run:
+          name: Create or update Azure resources
+          command: |
             ./deployment/create-azure-resources.sh ${CIRCLE_BRANCH}

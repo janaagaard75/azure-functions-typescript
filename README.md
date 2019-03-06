@@ -59,7 +59,8 @@ TODO:
 - Move some logic to an external file as a proof of concept.
 - Use a Node module as a proof of concept.
 - Better type definition for the functions. (HttpResponse is missing.)
-- Protect the master branch? This can only be done once the project has become public.
+- Set the main branch to `production`.
+- Protect the main branch. This can only be done once the project has become public.
 - Rollup? Remember to add both Day.js and something else.
 - Pre-commit for Prettier? See <https://prettier.io/docs/en/precommit.html>.
 
@@ -68,3 +69,4 @@ TODO:
 - Remember `sourceMap: true` in `tsconfig.json`.
 - A note about the recommended extensions.
 - Something about setting up Azure?
+- Configuring Jest.
