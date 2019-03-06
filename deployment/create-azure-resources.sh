@@ -25,6 +25,5 @@ az group deployment create \
   --mode Complete \
   --name "CircleCI-$now" \
   --resource-group $resource_group_name \
-  --rollback-on-error \
   --template-file $template_file \
   --verbose
