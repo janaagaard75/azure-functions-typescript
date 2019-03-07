@@ -29,19 +29,28 @@ The `func` command.
 
 ## Running
 
-Fire up a local Azure Functions environment. This will make the `greet` endpoint available at <http://localhost:7071/api/greet>.
+Fire up a local Azure Functions environment. This will make the `greet` endpoint available at <http://localhost:7071/api/greet>. It is possible to debug the code within Visual Studio Code from the Debug view.
 
+    # Host the functions locally.
     yarn start
 
-TODO: Explain the following commands:
+Run the tests. The tests are compiled on the fly, so it is not necessary to build the project first. `test-ci` saves the output of the tests in the `/test-results` folder.
 
-    yarn build
-    yarn clean
+    # Run the tests.
     yarn test
+    # Run the tests in continuous integration mode.
+    yarn test-ci
 
-## Repository Structure
+Build, lint and prettify the solution. In order to make the builds deterministic the output directory is deleted and dependencies are installed before building. Linting and prettifying the code is handled automatically by the recommended extensions for VSCode.
 
-TODO:
+    # Build the code.
+    yarn build
+    # Lint the code.
+    yarn lint
+    # Prettify the code.
+    yarn prettify
+
+## TODO: Repository Structure
 
 - Mention `src` and `dist`.
 - Explain how files are transformed from one folder structure to the other.
@@ -55,14 +64,15 @@ TODO:
 
 ## TODO
 
-- Continuous deployment to Azure through CircleCI.
 - Move some logic to an external file as a proof of concept.
-- Use a Node module as a proof of concept.
+- Use a Node module or two as a proof of concept.
+- Add an Azure test that verifies the endpoint.
 - Better type definition for the functions. (HttpResponse is missing.)
 - Set the main branch to `production`.
 - Protect the main branch. This can only be done once the project has become public.
 - Rollup? Remember to add both Day.js and something else.
 - Pre-commit for Prettier? See <https://prettier.io/docs/en/precommit.html>.
+- Document the solution.
 
 ## Documentation
 

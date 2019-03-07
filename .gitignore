@@ -1,11 +1,11 @@
-# Test results, stored when running the tests in continuous integration mode.
-/.test-results/
-
 # Built files, ready for distrubtion.
 /dist/
 
 # Node modules.
 /node_modules/
+
+# Test results, stored when running the tests in continuous integration mode.
+/test-results/
 
 # Log files.
 *.log
