@@ -13,19 +13,13 @@ The path chosen here is to compile the TypeScript to JavaScript using [Webpack](
 Azure Functions require and LTS version of Node.js, that is a version where the major version number is even. Node 10 currently the newest LTS version.
 
     brew install node@10
-    brew link node@10 --overwrite --force
+    brew link node@10 --force --overwrite
 
 ### Yarn
 
 Yarn is a better npm. I am especially a fan of the really fast installs on a system that is up to date, because this allows you to always run `yarn install` before building, making sure that you are using the correct versions of the Node modules.
 
     brew install yarn
-
-### Azure Function Core Tools
-
-The `func` command.
-
-    brew install azure-functions-core-tools
 
 ## Running
 
