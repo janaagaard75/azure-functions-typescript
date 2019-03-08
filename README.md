@@ -73,8 +73,7 @@ Build, lint and prettify the solution. In order to make the builds deterministic
 
 - Move some logic to an external file as a proof of concept.
 - Use a Node module or two as a proof of concept.
-- Add an Azure test that verifies the endpoint.
-- Better type definition for the functions. (HttpResponse is missing.)
+- Better type definitions for the functions. (HttpResponse is missing.)
 - Set the main branch to `production`.
 - Protect the main branch. This can only be done once the project has become public.
 - Rollup? Remember to add both Day.js and something else.
