@@ -76,10 +76,10 @@ Build, lint and prettify the solution. In order to make the builds deterministic
 - Better type definitions for the functions. (HttpResponse is missing.)
 - Set the main branch to `production`.
 - Protect the main branch. This can only be done once the project has become public.
-- Rollup? Remember to add both Day.js and something else.
 - Pre-commit for Prettier? See <https://prettier.io/docs/en/precommit.html>.
 - Document the solution.
 - Validate the branch names since they are used for naming the resource group.
+- Organize `config.yml` by splitting into multiple jobs.
 
 ## Documentation
 
