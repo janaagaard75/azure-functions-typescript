@@ -10,25 +10,13 @@
     "obj": true,
     "bin": true
   },
-  "jest.debugCodeLens.showWhenTestStateIn": [
-    "fail",
-    "pass",
-    "skip",
-    "unknown"
-  ],
-  "spellright.documentTypes": [
-    "latex",
-    "markdown",
-    "plaintext",
-    "typescript"
-  ],
+  "jest.debugCodeLens.showWhenTestStateIn": ["fail", "pass", "skip", "unknown"],
+  "spellright.documentTypes": ["latex", "markdown", "plaintext", "typescript"],
   "spellright.ignoreFiles": [
     "**/.gitignore",
     "**/.spellignore",
     "yarn.lock"
   ],
-  "spellright.language": [
-    "en"
-  ],
-  "typescript.tsdk": "node_modules/typescript/lib",
+  "spellright.language": ["en"],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
