@@ -1,7 +1,7 @@
 import { run as greet } from "./greet"
 
 describe("greet function", () => {
-  test("return correct greeting", async () => {
+  test("returns correct greeting", async () => {
     const request = {
       query: {
         name: "Jan Aagaard"

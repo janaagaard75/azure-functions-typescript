@@ -34,12 +34,12 @@ Fire up a local Azure Functions environment. This will make the `greet` endpoint
     # Host the functions locally.
     yarn start
 
-Run the tests. The tests are compiled on the fly, so it is not necessary to build the project first. `test-ci` saves the output of the tests in the `/test-results` folder.
+Run the tests. The tests are compiled on the fly, so it is not necessary to build the project first. `test:local:ci` saves the output of the tests in the `/test-results` folder.
 
-    # Run the tests.
-    yarn test
-    # Run the tests in continuous integration mode.
-    yarn test-ci
+    # Run the local tests.
+    yarn test:local
+    # Run the local tests in continuous integration mode.
+    yarn test:local:ci
 
 Build, lint and prettify the solution. In order to make the builds deterministic the output directory is deleted and dependencies are installed before building. Linting and prettifying the code is handled automatically by the recommended extensions for VSCode.
 
