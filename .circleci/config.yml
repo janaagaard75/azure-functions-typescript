@@ -36,9 +36,6 @@ jobs:
           name: Run local tests
           command: yarn run test:local:ci
 
-      - store_test_results:
-          path: test-results
-
       - run:
           name: Install Azure CLI
           command: |
@@ -63,3 +60,10 @@ jobs:
           name: Publish code to Azure functions
           command: |
             ./deployment/publish-to-azure.sh ${CIRCLE_BRANCH}
+
+      - run:
+          name: Run Azure tests
+          command: yarn run test:azure:ci
+
+      - store_test_results:
+          path: test-results

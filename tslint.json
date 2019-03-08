@@ -1,6 +1,7 @@
 {
   "extends": ["tslint:latest", "tslint-config-prettier"],
   "rules": {
+    "array-type": [true, "generic"],
     "no-duplicate-imports": false,
     "no-implicit-dependencies": [true, "dev"]
   }
