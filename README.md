@@ -80,6 +80,7 @@ Build, lint and prettify the solution. In order to make the builds deterministic
 - Rollup? Remember to add both Day.js and something else.
 - Pre-commit for Prettier? See <https://prettier.io/docs/en/precommit.html>.
 - Document the solution.
+- Validate the branch names since they are used for naming the resource group.
 
 ## Documentation
 
