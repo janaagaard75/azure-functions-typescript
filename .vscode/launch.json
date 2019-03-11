@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Start host and attach debugger",
+      "type": "node",
+      "request": "attach",
+      "timeout": 20000,
+      "port": 9229,
+      "preLaunchTask": "startFunctionsHost"
+    }
+  ]
+}

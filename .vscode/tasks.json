@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "startFunctionsHost",
+      "type": "npm",
+      "script": "start",
+      "problemMatcher": "$func-watch",
+      "isBackground": true,
+      "options": {
+        "env": {
+          "languageWorkers__node__arguments": "--inspect=9229"
+        }
+      }
+    }
+  ]
+}
