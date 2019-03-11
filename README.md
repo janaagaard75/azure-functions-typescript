@@ -18,3 +18,9 @@ Azure Functions require a long term support (LTS) version of Node.js - that's a 
 Yarn is a better npm. I am especially a fan of the really fast installs on a system that is up to date, because this allows you to always run `yarn install` before building, making sure that you are using the correct versions of the Node modules.
 
     brew install yarn
+
+## Running the Code
+
+Start a local Azure Functions host. This will make HTTP endpoints available at <http://localhost:7071/api/...>.
+
+    yarn start
