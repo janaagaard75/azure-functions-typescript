@@ -1,0 +1,12 @@
+{
+  "name": "azure-functions-typescript",
+  "version": "1.0.0",
+  "description": "Microsoft serverless Azure Function written in TypeScript.",
+  "repository": "https://github.com/janaagaard75/azure-functions-typescript.git",
+  "author": "Jan Aagaard <jan@aagaard.net>",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "yarn": ">=1"
+  }
+}
