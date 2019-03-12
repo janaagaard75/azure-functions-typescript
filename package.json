@@ -11,7 +11,7 @@
     "yarn": ">=1"
   },
   "scripts": {
-    "start": "func host start"
+    "start": "(cd src; func host start)"
   },
   "devDependencies": {
     "azure-functions-core-tools": "2.7.1373"
