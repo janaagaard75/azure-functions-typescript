@@ -29,7 +29,7 @@ An Azure account. You can create one for free at <https://portal.azure.com/>.
 
 ## Building and Running the Code
 
-Start a local Azure Functions host. Remember to build the code first. This will make HTTP endpoints available at <http://localhost:7071/api/...>.
+Start a local Azure Functions host. This command also installs Node modules, cleans the distribution folder and builds the code. This will make HTTP endpoints available at <http://localhost:7071/api/...>.
 
     yarn start
 
@@ -38,9 +38,13 @@ Run the tests. The TypeScript code is compiled on the fly when running the tests
     yarn test
     yarn test-e2e
 
-Build the solution. This compiles the TypeScript files in the `src` folder into the JavaScript in the `dist` folder, and copies all `.json` files from `src` to `dist`.
+Build the solution. This compiles the TypeScript files in the `src` folder into the JavaScript in the `dist` folder, and copies all `.json` files from `src` to `dist`. The distribution folder is deleted before building to make sure that renamed files are removed.
 
     yarn build
+
+Clean up. This simply deletes the distribution folder `dist`.
+
+    yarn clean
 
 ## Continuous Deployment
 
