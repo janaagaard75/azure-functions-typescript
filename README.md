@@ -19,8 +19,12 @@ Yarn is a better npm. I am especially a fan of the really fast installs on a sys
 
     brew install yarn
 
-## Running the Code
+## Building and Running the Code
 
-Start a local Azure Functions host. This will make HTTP endpoints available at <http://localhost:7071/api/...>.
+Start a local Azure Functions host. Remember to build the code first. This will make HTTP endpoints available at <http://localhost:7071/api/...>.
 
     yarn start
+
+Build the solution. This compiles the TypeScript files in the `src` folder into the JavaScript in the `dist` folder, and copies all `.json` files from `src` to `dist`.
+
+    yarn build

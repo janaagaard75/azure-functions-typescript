@@ -3,6 +3,7 @@
   "azureFunctions.preDeployTask": "func: extensions install",
   "azureFunctions.projectLanguage": "JavaScript",
   "azureFunctions.projectRuntime": "~2",
+  "azureFunctions.projectSubpath": "dist",
   "azureFunctions.templateFilter": "Verified",
   "debug.internalConsoleOptions": "neverOpen",
   "editor.formatOnSave": true,
@@ -11,12 +12,13 @@
     "bin": true,
     "obj": true
   },
-  "spellright.documentTypes": ["latex", "markdown", "plaintext"],
+  "spellright.documentTypes": ["latex", "markdown", "plaintext", "typescript"],
   "spellright.ignoreFiles": [
     "**/.gitignore",
     "**/.spellignore",
     "/node_modules/",
     "yarn.lock"
   ],
-  "spellright.language": ["en"]
+  "spellright.language": ["en"],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
