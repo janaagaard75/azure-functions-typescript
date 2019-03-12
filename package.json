@@ -11,12 +11,13 @@
     "yarn": ">=1"
   },
   "scripts": {
-    "build": "tsc && cp src/*.json dist && cp src/greet/*.json dist/greet",
+    "build": "tsc && copyfiles --up 1 \"src/**/*.json\" dist",
     "start": "yarn run build && (cd dist; func host start)"
   },
   "devDependencies": {
     "@types/node": "10.14.*",
     "azure-functions-core-tools": "2.7.1373",
+    "copyfiles": "2.1.0",
     "typescript": "3.5.1"
   }
 }
