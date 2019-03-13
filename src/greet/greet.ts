@@ -1,13 +1,16 @@
 import { Context } from "@azure/functions";
 import { HttpRequest } from "@azure/functions";
 
-export async function greet(context: Context, req: HttpRequest): Promise<any> {
+export async function greet(
+  context: Context,
+  request: HttpRequest
+): Promise<any> {
   context.log("JavaScript HTTP trigger function processed a request.");
 
-  if (req.query.name || (req.body && req.body.name)) {
+  if (request.query.name || (request.body && request.body.name)) {
     return {
       // status: 200, /* Defaults to 200 */
-      body: "Hello " + (req.query.name || req.body.name)
+      body: "Hello " + (request.query.name || request.body.name)
     };
   } else {
     return {
