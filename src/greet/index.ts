@@ -2,12 +2,12 @@ export async function run(context: any, req: any): Promise<any> {
   context.log("JavaScript HTTP trigger function processed a request.");
 
   if (req.query.name || (req.body && req.body.name)) {
-    context.res = {
+    return {
       // status: 200, /* Defaults to 200 */
       body: "Hello " + (req.query.name || req.body.name)
     };
   } else {
-    context.res = {
+    return {
       status: 400,
       body: "Please pass a name on the query string or in the request body"
     };
