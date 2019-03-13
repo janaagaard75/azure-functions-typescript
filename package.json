@@ -13,6 +13,7 @@
   "scripts": {
     "build": "yarn run clean && tsc && copyfiles --up 1 \"src/**/*.json\" dist",
     "clean": "yarn install --frozen-lockfile && rimraf dist",
+    "format": "prettier --write '{./,./src/**/}*.{js,json,ts}'",
     "start": "yarn run build && (cd dist; func host start)",
     "test": "jest --testRegex \"\\.test\\.ts$\"",
     "test-save-results": "cross-env JEST_JUNIT_OUTPUT=test-results/test-results-local.xml jest --ci --runInBand --reporters=default --reporters=jest-junit --testRegex \"\\.test\\.ts$\"",
@@ -31,6 +32,7 @@
     "jest": "24.8.0",
     "jest-junit": "6.4.0",
     "node-fetch": "2.6.0",
+    "prettier": "1.18.2",
     "rimraf": "2.6.3",
     "ts-jest": "24.0.2",
     "typescript": "3.5.1"

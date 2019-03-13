@@ -46,6 +46,10 @@ Clean up. This simply deletes the distribution folder `dist`.
 
     yarn clean
 
+Auto format the files using [Prettier](https://prettier.io/). If you're using VSCode and have the recommended extension installed, this is done automatically when saving files.
+
+    yarn format
+
 ## Continuous Deployment
 
 Continuous deployment is done with [CircleCI](https://circleci.com/), and configured in `config.yml`.
