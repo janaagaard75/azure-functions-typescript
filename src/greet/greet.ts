@@ -5,8 +5,6 @@ export async function greet(
   context: Context,
   request: HttpRequest
 ): Promise<any> {
-  context.log("JavaScript HTTP trigger function processed a request.");
-
   if (request.query.name || (request.body && request.body.name)) {
     return {
       // status: 200, /* Defaults to 200 */
