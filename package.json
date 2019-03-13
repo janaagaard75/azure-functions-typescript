@@ -14,6 +14,7 @@
     "build": "yarn run clean && tsc && copyfiles --up 1 \"src/**/*.json\" dist",
     "clean": "yarn install --frozen-lockfile && rimraf dist",
     "format": "prettier --write '{./,./src/**/}*.{js,json,ts}'",
+    "lint": "tslint src/**/*.ts",
     "start": "yarn run build && (cd dist; func host start)",
     "test": "jest --testRegex \"\\.test\\.ts$\"",
     "test-save-results": "cross-env JEST_JUNIT_OUTPUT=test-results/test-results-local.xml jest --ci --runInBand --reporters=default --reporters=jest-junit --testRegex \"\\.test\\.ts$\"",
@@ -35,6 +36,8 @@
     "prettier": "1.18.2",
     "rimraf": "2.6.3",
     "ts-jest": "24.0.2",
+    "tslint": "5.17.0",
+    "tslint-config-prettier": "1.18.0",
     "typescript": "3.5.1"
   }
 }

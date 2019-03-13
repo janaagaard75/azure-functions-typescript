@@ -50,6 +50,10 @@ Auto format the files using [Prettier](https://prettier.io/). If you're using VS
 
     yarn format
 
+Lint the code. If you're using VSCode and have the recommended extension installed, errors will be underlined with green squiggly lines.
+
+    yarn lint
+
 ## Continuous Deployment
 
 Continuous deployment is done with [CircleCI](https://circleci.com/), and configured in `config.yml`.

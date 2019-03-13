@@ -11,8 +11,8 @@ export async function greet(context: Context, req: HttpRequest): Promise<any> {
     };
   } else {
     return {
-      status: 400,
-      body: "Please pass a name on the query string or in the request body"
+      body: "Please pass a name on the query string or in the request body",
+      status: 400
     };
   }
 }
