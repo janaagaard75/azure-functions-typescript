@@ -7,7 +7,6 @@ export async function greet(
 ): Promise<any> {
   if (request.query.name || (request.body && request.body.name)) {
     return {
-      // status: 200, /* Defaults to 200 */
       body: "Hello " + (request.query.name || request.body.name)
     };
   } else {
