@@ -6,16 +6,16 @@ export async function greet(
   request: HttpRequest
 ): Promise<any> {
   const name = extractName(request);
-  if (name !== "") {
-    return {
-      body: "Hello " + name
-    };
-  } else {
+  if (name === "") {
     return {
       body: "Please pass a name on the query string or in the request body",
       status: 400
     };
   }
+
+  return {
+    body: "Hello " + name
+  };
 }
 
 function extractName(request: HttpRequest): string {
