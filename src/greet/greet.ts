@@ -5,9 +5,10 @@ export async function greet(
   context: Context,
   request: HttpRequest
 ): Promise<any> {
-  if (request.query.name || (request.body && request.body.name)) {
+  const name = extractName(request);
+  if (name !== "") {
     return {
-      body: "Hello " + (request.query.name || request.body.name)
+      body: "Hello " + name
     };
   } else {
     return {
@@ -15,4 +16,16 @@ export async function greet(
       status: 400
     };
   }
+}
+
+function extractName(request: HttpRequest): string {
+  if (request.query.name) {
+    return request.query.name;
+  }
+
+  if (request.body && request.body.name) {
+    return request.body.name;
+  }
+
+  return "";
 }
