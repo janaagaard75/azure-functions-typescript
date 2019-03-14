@@ -1,0 +1,24 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      # Match the version in azure-resource.json. See https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-node#node-version.
+      - image: circleci/node:10.14.1-stretch
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - node-modules-{{ checksum "yarn.lock" }}
+      - run:
+          name: Install Node modules
+          command: yarn install --frozen-lockfile
+      - save_cache:
+          key: node-modules-{{ checksum "yarn.lock" }}
+          paths:
+            - ./cache/yarn
+      - run:
+          name: Build
+          command: yarn run build
+      - run:
+          name: Run tests
+          command: yarn run test

@@ -19,6 +19,12 @@ Yarn is a better npm. I am especially a fan of the really fast installs on a sys
 
     brew install yarn
 
+### Accounts at GitHub and CircleCI
+
+A GitHub account. You can create one for free at <https://github.com/>. CircleCI also works with [Bitbucket](https://bitbucket.com), but I haven't tried that, so I don't know if there are any differences from using it with GitHub.
+
+A CircleCI account. You can create on for free at <https://circleci.com/>. You sign in to CircleCI with your GitHub account, so create that one first.
+
 ## Building and Running the Code
 
 Start a local Azure Functions host. Remember to build the code first. This will make HTTP endpoints available at <http://localhost:7071/api/...>.
@@ -32,3 +38,7 @@ Run the tests. The TypeScript code is compiled on the fly when running the tests
 Build the solution. This compiles the TypeScript files in the `src` folder into the JavaScript in the `dist` folder, and copies all `.json` files from `src` to `dist`.
 
     yarn build
+
+## Continuous Delivery
+
+Continuous Delivery is done with [CircleCI](https://circleci.com/), and configured in `config.yml`.
