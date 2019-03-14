@@ -1,4 +1,6 @@
 version: 2.1
+orbs:
+  azure-cli: circleci/azure-cli@1.0.0
 jobs:
   build:
     docker:
@@ -22,5 +24,11 @@ jobs:
       - run:
           name: Run tests
           command: yarn run test-save-results
+      - azure-cli/install
+      - azure-cli/login-with-user
+      - run:
+          name: Create or update Azure resources
+          command: |
+            ./.circleci/create-azure-resources.sh ${CIRCLE_BRANCH}
       - store_test_results:
           path: test-results

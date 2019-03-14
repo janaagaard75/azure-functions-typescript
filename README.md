@@ -19,11 +19,13 @@ Yarn is a better npm. I am especially a fan of the really fast installs on a sys
 
     brew install yarn
 
-### Accounts at GitHub and CircleCI
+### Accounts at GitHub, CircleCI and Azure
 
 A GitHub account. You can create one for free at <https://github.com/>. CircleCI also works with [Bitbucket](https://bitbucket.com), but I haven't tried that, so I don't know if there are any differences from using it with GitHub.
 
 A CircleCI account. You can create on for free at <https://circleci.com/>. You sign in to CircleCI with your GitHub account, so create that one first.
+
+An Azure account. You can create one for free at <https://portal.azure.com/>.
 
 ## Building and Running the Code
 
