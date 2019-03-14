@@ -39,6 +39,8 @@ Build the solution. This compiles the TypeScript files in the `src` folder into 
 
     yarn build
 
-## Continuous Delivery
+## Continuous Deployment
 
-Continuous Delivery is done with [CircleCI](https://circleci.com/), and configured in `config.yml`.
+Continuous deployment is done with [CircleCI](https://circleci.com/), and configured in `config.yml`.
+
+The run script `yarn test-save-results` run the same tests as `yarn test`, but stored the result in a `test-results` folder so that CircleCI can display a summary.
