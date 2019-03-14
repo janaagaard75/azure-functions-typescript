@@ -25,6 +25,10 @@ Start a local Azure Functions host. Remember to build the code first. This will 
 
     yarn start
 
+Run the tests. The TypeScript code is compiled on the fly when running the tests, so it is not necessary to build the code first.
+
+    yest test
+
 Build the solution. This compiles the TypeScript files in the `src` folder into the JavaScript in the `dist` folder, and copies all `.json` files from `src` to `dist`.
 
     yarn build

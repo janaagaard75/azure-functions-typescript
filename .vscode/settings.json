@@ -12,6 +12,7 @@
     "bin": true,
     "obj": true
   },
+  "jest.debugCodeLens.showWhenTestStateIn": ["fail", "pass", "skip", "unknown"],
   "spellright.documentTypes": ["latex", "markdown", "plaintext", "typescript"],
   "spellright.ignoreFiles": [
     "**/.gitignore",

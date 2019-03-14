@@ -12,12 +12,16 @@
   },
   "scripts": {
     "build": "tsc && copyfiles --up 1 \"src/**/*.json\" dist",
-    "start": "yarn run build && (cd dist; func host start)"
+    "start": "yarn run build && (cd dist; func host start)",
+    "test": "jest"
   },
   "devDependencies": {
+    "@types/jest": "24.0.13",
     "@types/node": "10.14.*",
     "azure-functions-core-tools": "2.7.1373",
     "copyfiles": "2.1.0",
+    "jest": "24.8.0",
+    "ts-jest": "24.0.2",
     "typescript": "3.5.1"
   }
 }
