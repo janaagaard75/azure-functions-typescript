@@ -33,9 +33,10 @@ Start a local Azure Functions host. Remember to build the code first. This will 
 
     yarn start
 
-Run the tests. The TypeScript code is compiled on the fly when running the tests, so it is not necessary to build the code first.
+Run the tests. The TypeScript code is compiled on the fly when running the tests, so it is not necessary to build the code first. There a two types of tests: Local tests and end-to-end tests. The end-to-end tests verifies that the endpoints on Azure works, so they require that the code has been published to Azure.
 
-    yest test
+    yarn test
+    yarn test-e2e
 
 Build the solution. This compiles the TypeScript files in the `src` folder into the JavaScript in the `dist` folder, and copies all `.json` files from `src` to `dist`.
 
@@ -45,4 +46,4 @@ Build the solution. This compiles the TypeScript files in the `src` folder into 
 
 Continuous deployment is done with [CircleCI](https://circleci.com/), and configured in `config.yml`.
 
-The run script `yarn test-save-results` run the same tests as `yarn test`, but stored the result in a `test-results` folder so that CircleCI can display a summary.
+The run scripts `test-save-results` and `test-e2e-save-results` run the same tests as their counterparts without the `-save-results` postfix, but stores the result in a `test-results` folder so that CircleCI can display a summary.
