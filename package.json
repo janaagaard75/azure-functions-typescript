@@ -14,8 +14,9 @@
     "build": "tsc && copyfiles --up 1 \"src/**/*.json\" dist",
     "start": "yarn run build && (cd dist; func host start)",
     "test": "jest --testRegex \"\\.test\\.ts$\"",
-    "test-save-results": "cross-env JEST_JUNIT_OUTPUT=test-results/test-results.xml jest --ci --runInBand --reporters=default --reporters=jest-junit --testRegex \"\\.test\\.ts$\"",
-    "test-e2e": "jest --testRegex \"\\.e2e-test\\.ts$\""
+    "test-save-results": "cross-env JEST_JUNIT_OUTPUT=test-results/test-results-local.xml jest --ci --runInBand --reporters=default --reporters=jest-junit --testRegex \"\\.test\\.ts$\"",
+    "test-e2e": "jest --testRegex \"\\.e2e-test\\.ts$\"",
+    "test-e2e-save-results": "cross-env JEST_JUNIT_OUTPUT=test-results/test-results-e2e.xml jest --ci --runInBand --reporters=default --reporters=jest-junit --testRegex \"\\.e2e-test\\.ts$\""
   },
   "devDependencies": {
     "@types/jest": "24.0.13",
