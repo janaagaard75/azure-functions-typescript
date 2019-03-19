@@ -6,6 +6,7 @@
   "azureFunctions.templateFilter": "Verified",
   "debug.internalConsoleOptions": "neverOpen",
   "editor.formatOnSave": true,
+  "editor.tabSize": 2,
   "files.exclude": {
     "bin": true,
     "obj": true
