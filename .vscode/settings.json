@@ -10,5 +10,13 @@
   "files.exclude": {
     "bin": true,
     "obj": true
-  }
+  },
+  "spellright.documentTypes": ["latex", "markdown", "plaintext"],
+  "spellright.ignoreFiles": [
+    "**/.gitignore",
+    "**/.spellignore",
+    "/node_modules/",
+    "yarn.lock"
+  ],
+  "spellright.language": ["en"]
 }
