@@ -14,5 +14,6 @@
       "type": "http"
     }
   ],
-  "entryPoint": "greet"
+  "entryPoint": "greet",
+  "scriptFile": "greet.js"
 }

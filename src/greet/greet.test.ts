@@ -1,7 +1,7 @@
 import { Context } from "@azure/functions";
 import { HttpRequest } from "@azure/functions";
 import { Substitute } from "@fluffy-spoon/substitute";
-import { greet } from "./index";
+import { greet } from "./greet";
 
 describe("greet function", () => {
   test("returns correct greeting", async () => {
