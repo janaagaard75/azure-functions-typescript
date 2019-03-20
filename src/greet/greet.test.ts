@@ -17,6 +17,6 @@ describe("greet function", () => {
 
     const response = await greet(context, request);
 
-    expect(response.body).toBe("Hello Jan Aagaard");
+    expect(response.body).toBe("Hello Jan Aagaard.");
   });
 });

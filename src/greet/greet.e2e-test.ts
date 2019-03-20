@@ -8,7 +8,7 @@ describe("greet endpoint", () => {
       `${TestHelper.apiRootUrl}/greet?name=Jan+Aagaard`
     );
     const body = await response.text();
-    expect(body).toBe("Hello Jan Aagaard");
+    expect(body).toBe("Hello Jan Aagaard.");
   });
 
   test("return correct greeting when using POST", async () => {
@@ -18,6 +18,6 @@ describe("greet endpoint", () => {
       method: "POST"
     });
     const responseBody = await response.text();
-    expect(responseBody).toBe("Hello Jan Aagaard");
+    expect(responseBody).toBe("Hello Jan Aagaard.");
   });
 });

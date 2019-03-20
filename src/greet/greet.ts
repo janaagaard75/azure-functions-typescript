@@ -14,7 +14,7 @@ export async function greet(
   }
 
   return {
-    body: "Hello " + name
+    body: `Hello ${name}.`
   };
 }
 
