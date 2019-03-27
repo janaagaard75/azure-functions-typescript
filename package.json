@@ -10,6 +10,9 @@
     "node": ">=10.14.1 <11",
     "yarn": ">=1"
   },
+  "scripts": {
+    "start": "func host start"
+  },
   "devDependencies": {
     "azure-functions-core-tools": "2.7.1373"
   }
