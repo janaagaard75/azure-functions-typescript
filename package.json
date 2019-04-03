@@ -19,6 +19,8 @@
     "test-e2e-save-results": "cross-env JEST_JUNIT_OUTPUT=test-results/test-results-e2e.xml jest --ci --runInBand --reporters=default --reporters=jest-junit --testRegex \"\\.e2e-test\\.ts$\""
   },
   "devDependencies": {
+    "@azure/functions": "1.0.3",
+    "@fluffy-spoon/substitute": "1.88.0",
     "@types/jest": "24.0.13",
     "@types/node": "10.14.*",
     "@types/node-fetch": "2.3.5",

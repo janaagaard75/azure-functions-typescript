@@ -1,20 +1,21 @@
+import { Context } from "@azure/functions";
+import { HttpRequest } from "@azure/functions";
+import { Substitute } from "@fluffy-spoon/substitute";
 import { run as greet } from "./index";
 
 describe("greet function", () => {
   test("returns correct greeting", async () => {
-    // TODO: Add helpers for creating the request and the context.
-    const request = {
-      query: {
-        name: "Jan Aagaard"
-      }
-    };
+    const request = Substitute.for<HttpRequest>();
+    (request.query.returns as any)({
+      name: "Jan Aagaard"
+    });
 
-    const context = {
-      log: () => undefined,
+    const context = Substitute.for<Context>();
+    (context.req as any).returns({
       req: request
-    };
+    });
 
-    const response = await greet(context as any, request as any);
+    const response = await greet(context, request);
 
     expect(response.body).toBe("Hello Jan Aagaard");
   });

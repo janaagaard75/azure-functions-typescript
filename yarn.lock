@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@azure/functions@1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@azure/functions/-/functions-1.0.3.tgz#1b51d58f188903f59f39bd093fe6f7b8d88deb11"
+  integrity sha512-/D+sz6LgWT+A6RRW2zhwlwhKqqDSxL6HCF1Q1lN0iXolD2FfNFZpzrOxGyGYEEXp/5Dtjp12bcRTBhMH1cBi2Q==
+
 "@babel/code-frame@^7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.0.0.tgz#06e2ab19bdb535385559aabb5ba59729482800f8"
@@ -138,6 +143,11 @@
   dependencies:
     exec-sh "^0.3.2"
     minimist "^1.2.0"
+
+"@fluffy-spoon/substitute@1.88.0":
+  version "1.88.0"
+  resolved "https://registry.yarnpkg.com/@fluffy-spoon/substitute/-/substitute-1.88.0.tgz#c6a4a4c7fd1898a49ec31778f8e5222da38bde93"
+  integrity sha512-BJYWBilA38NoKCbDve9xoomLtUNOTw2siZkog0iwN5aLObZKfWnoH+GGkZ1ZLwMj2YqzA49NGsSb60gbaPlaWw==
 
 "@jest/console@^24.7.1":
   version "24.7.1"

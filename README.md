@@ -47,3 +47,7 @@ Build the solution. This compiles the TypeScript files in the `src` folder into 
 Continuous deployment is done with [CircleCI](https://circleci.com/), and configured in `config.yml`.
 
 The run scripts `test-save-results` and `test-e2e-save-results` run the same tests as their counterparts without the `-save-results` postfix, but stores the result in a `test-results` folder so that CircleCI can display a summary.
+
+## Casting to `any` in Tests
+
+The mock library Substitute has a known issue in that it [doesn't work in strict null checking mode](https://github.com/ffMathy/FluffySpoon.JavaScript.Testing.Faking#strict-mode). In order to avoid the compiler error the mocked interfaces are cast to `any` when calling the `returns` method. This makes the code when working with mocked interfaces a bit ugly, but I think this is a better solution than turning off `strickNullChecks`.
