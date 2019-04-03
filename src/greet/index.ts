@@ -1,4 +1,4 @@
-export async function run(context, req) {
+export async function run(context: any, req: any): Promise<any> {
   context.log("JavaScript HTTP trigger function processed a request.");
 
   if (req.query.name || (req.body && req.body.name)) {

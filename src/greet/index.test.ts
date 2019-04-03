@@ -14,7 +14,7 @@ describe("greet function", () => {
       req: request
     };
 
-    await greet(context, request);
+    await greet(context as any, request as any);
     const response = (context as any).res;
 
     expect(response.body).toBe("Hello Jan Aagaard");
