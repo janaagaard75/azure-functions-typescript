@@ -1,4 +1,5 @@
 import { spawnSync } from "child_process";
+import * as process from "process";
 
 interface ResourceInfo {
   name: string;
@@ -21,7 +22,7 @@ export class TestHelper {
     ).trim();
     const resourceGroupName = `azure-functions-typescript-${currentBranchName}`;
     const resourcesInfo = this.runShellCommand(
-      `az resource list --resource-group ${resourceGroupName}`
+      `${this.azCommand} resource list --resource-group ${resourceGroupName}`
     );
     const resourceInfos = JSON.parse(resourcesInfo) as Array<ResourceInfo>;
     const functionsResourceName = resourceInfos
@@ -54,5 +55,13 @@ export class TestHelper {
     }
 
     return response.stdout.toString();
+  }
+
+  private static get azCommand(): string {
+    if (process.platform === "win32") {
+      return "az.cmd";
+    }
+
+    return "az";
   }
 }
