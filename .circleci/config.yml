@@ -1,11 +1,15 @@
 version: 2.1
 orbs:
   azure-cli: circleci/azure-cli@1.1.0
-jobs:
-  build:
+executors:
+  node10:
     docker:
       # Match the version in azure-resource.json. See https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-node#node-version.
       - image: circleci/node:10.14.1-stretch
+    working_directory: ~/repo
+jobs:
+  lint-test-build:
+    executor: node10
     steps:
       - checkout
       - restore_cache:
@@ -27,6 +31,23 @@ jobs:
       - run:
           name: Run tests
           command: yarn run test-save-results
+      - run:
+          name: Build
+          command: yarn run build
+      - persist_to_workspace:
+          root: .
+          paths:
+            - .circleci
+            - dist
+  deploy:
+    executor: azure-cli/default
+    steps:
+      - checkout
+      - run:
+          name: Install Node modules
+          command: npm install
+      - attach_workspace:
+          at: ./
       - azure-cli/install
       - azure-cli/login-with-user
       - run:
@@ -38,8 +59,35 @@ jobs:
       - run:
           name: Publish code to Azure
           command: ./.circleci/publish-to-azure.sh ${CIRCLE_BRANCH}
+  end-to-end-tests:
+    executor: node10
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - node-modules-{{ checksum "yarn.lock" }}
+            # Fallback to using the latest cache if no exact match is found.
+            - node-modules-
+      - run:
+          name: Install Node modules
+          command: yarn install --frozen-lockfile
+      - save_cache:
+          key: node-modules-{{ checksum "yarn.lock" }}
+          paths:
+            - ./cache/node_modules
       - run:
           name: Run end-to-end tests
           command: yarn run test-e2e-save-results
       - store_test_results:
           path: test-results
+workflows:
+  version: 2
+  main:
+    jobs:
+      - lint-test-build
+      - deploy:
+          requires:
+            - lint-test-build
+      - end-to-end-tests:
+          requires:
+            - deploy
