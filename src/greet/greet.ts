@@ -6,7 +6,7 @@ export async function greet(
   request: HttpRequest
 ): Promise<any> {
   const name = extractName(request);
-  if (name === "") {
+  if (name === undefined) {
     return {
       body: "Please pass a name on the query string or in the request body",
       status: 400
@@ -18,7 +18,17 @@ export async function greet(
   };
 }
 
-function extractName(request: HttpRequest): string {
+function extractName(request: HttpRequest): string | undefined {
+  const name = getNameFromQueryOrBody(request).trim();
+
+  if (name.length === 0) {
+    return undefined;
+  }
+
+  return name;
+}
+
+function getNameFromQueryOrBody(request: HttpRequest): string {
   if (request.query.name) {
     return request.query.name;
   }
