@@ -23,12 +23,12 @@
   },
   "devDependencies": {
     "@azure/functions": "1.0.3",
-    "@fluffy-spoon/substitute": "1.88.0",
-    "@types/jest": "24.0.13",
+    "@fluffy-spoon/substitute": "1.89.0",
+    "@types/jest": "24.0.15",
     "@types/node": "10.14.*",
-    "@types/node-fetch": "2.3.5",
-    "azure-functions-core-tools": "2.7.1373",
-    "copyfiles": "2.1.0",
+    "@types/node-fetch": "2.3.7",
+    "azure-functions-core-tools": "2.7.1480",
+    "copyfiles": "2.1.1",
     "cross-env": "5.2.0",
     "jest": "24.8.0",
     "jest-junit": "6.4.0",
@@ -36,8 +36,8 @@
     "prettier": "1.18.2",
     "rimraf": "2.6.3",
     "ts-jest": "24.0.2",
-    "tslint": "5.17.0",
+    "tslint": "5.18.0",
     "tslint-config-prettier": "1.18.0",
-    "typescript": "3.5.1"
+    "typescript": "3.5.3"
   }
 }
