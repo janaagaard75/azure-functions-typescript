@@ -8,7 +8,7 @@ export async function greet(
   const name = extractName(request);
   if (name === undefined) {
     return {
-      body: "Please pass a name on the query string or in the request body",
+      body: "Please pass a name on the query string or in the request body.",
       status: 400
     };
   }
