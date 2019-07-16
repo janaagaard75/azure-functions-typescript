@@ -7,8 +7,8 @@ describe("greet endpoint", () => {
     const response = await fetch(
       `${TestHelper.apiRootUrl}/greet?name=Jan+Aagaard`
     );
-    const body = await response.text();
-    expect(body).toBe("Hello Jan Aagaard.");
+    const responseBody = await response.text();
+    expect(responseBody).toBe("Hello Jan Aagaard.");
   });
 
   test("return correct greeting when using POST", async () => {
