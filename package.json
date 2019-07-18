@@ -21,6 +21,9 @@
     "test-e2e": "jest --testRegex \"\\.e2e-test\\.ts$\"",
     "test-e2e-save-results": "cross-env JEST_JUNIT_OUTPUT=test-results/test-results-e2e.xml jest --ci --runInBand --reporters=default --reporters=jest-junit --testRegex \"\\.e2e-test\\.ts$\""
   },
+  "dependencies": {
+    "dayjs": "1.8.15"
+  },
   "devDependencies": {
     "@azure/functions": "1.0.3",
     "@fluffy-spoon/substitute": "1.89.0",
