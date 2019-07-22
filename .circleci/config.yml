@@ -31,12 +31,10 @@ jobs:
       - azure-cli/login-with-user
       - run:
           name: Create or update Azure resources
-          command: |
-            ./.circleci/create-azure-resources.sh ${CIRCLE_BRANCH}
+          command: ./.circleci/create-azure-resources.sh ${CIRCLE_BRANCH}
       - run:
           name: Publish code to Azure
-          command: |
-            ./.circleci/publish-to-azure.sh ${CIRCLE_BRANCH}
+          command: ./.circleci/publish-to-azure.sh ${CIRCLE_BRANCH}
       - run:
           name: Run end-to-end tests
           command: yarn run test-e2e-save-results
