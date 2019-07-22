@@ -33,6 +33,9 @@ jobs:
           name: Create or update Azure resources
           command: ./.circleci/create-azure-resources.sh ${CIRCLE_BRANCH}
       - run:
+          name: Install production Node modules
+          command: (cd dist; yarn install --frozen-lockfile --production)
+      - run:
           name: Publish code to Azure
           command: ./.circleci/publish-to-azure.sh ${CIRCLE_BRANCH}
       - run:
