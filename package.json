@@ -12,6 +12,7 @@
   },
   "scripts": {
     "build": "yarn run clean && tsc && copyfiles --up 1 \"src/**/*.json\" dist && copyfiles package.json dist",
+    "check-types": "yarn install && tsc --noEmit",
     "clean": "yarn install --frozen-lockfile && rimraf dist",
     "format": "prettier --write '{./,./src/**/}*.{js,json,ts}'",
     "lint": "tslint src/**/*.ts",
