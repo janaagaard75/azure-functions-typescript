@@ -13,7 +13,7 @@
     "obj": true
   },
   "jest.debugCodeLens.showWhenTestStateIn": ["fail", "pass", "skip", "unknown"],
-  "spellright.documentTypes": ["latex", "markdown", "plaintext", "typescript"],
+  "spellright.documentTypes": ["javascript", "json", "markdown", "typescript"],
   "spellright.ignoreFiles": [
     "**/.gitignore",
     "**/.spellignore",
