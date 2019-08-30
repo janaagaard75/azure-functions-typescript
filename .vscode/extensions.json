@@ -4,6 +4,7 @@
     "esbenp.prettier-vscode",
     "ms-azuretools.vscode-azurefunctions",
     "orta.vscode-jest",
-    "redhat.vscode-yaml"
+    "redhat.vscode-yaml",
+    "streetsidesoftware.code-spell-checker"
   ]
 }

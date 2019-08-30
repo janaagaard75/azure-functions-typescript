@@ -5,6 +5,27 @@
   "azureFunctions.projectRuntime": "~2",
   "azureFunctions.projectSubpath": "dist",
   "azureFunctions.templateFilter": "Verified",
+  "cSpell.words": [
+    "Bitbucket",
+    "CONTENTAZUREFILECONNECTIONSTRING",
+    "CONTENTSHARE",
+    "INSTRUMENTATIONKEY",
+    "MSDEPLOY",
+    "aagaard",
+    "appinsights",
+    "circleci",
+    "codeframe",
+    "copyfiles",
+    "dayjs",
+    "daystochristmas",
+    "functionapp",
+    "junit",
+    "lockfile",
+    "memoized",
+    "readonly",
+    "serverfarms",
+    "serviceplan"
+  ],
   "debug.internalConsoleOptions": "neverOpen",
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
@@ -13,13 +34,5 @@
     "obj": true
   },
   "jest.debugCodeLens.showWhenTestStateIn": ["fail", "pass", "skip", "unknown"],
-  "spellright.documentTypes": ["javascript", "json", "markdown", "typescript"],
-  "spellright.ignoreFiles": [
-    "**/.gitignore",
-    "**/.spellignore",
-    "/node_modules/",
-    "yarn.lock"
-  ],
-  "spellright.language": ["en"],
   "typescript.tsdk": "node_modules/typescript/lib"
 }
