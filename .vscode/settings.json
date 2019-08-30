@@ -22,6 +22,7 @@
     "junit",
     "lockfile",
     "memoized",
+    "promisify",
     "readonly",
     "serverfarms",
     "serviceplan"
