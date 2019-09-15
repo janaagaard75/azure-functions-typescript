@@ -1,7 +1,7 @@
-const util = require("util");
+import util = require("util");
 const exec = util.promisify(require("child_process").exec);
 
-async function executeCommand(command) {
+async function executeCommand(command: string): Promise<string> {
   const result = await exec(command);
   return result.stdout;
 }
