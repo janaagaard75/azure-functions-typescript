@@ -2,7 +2,7 @@ import { Context } from "@azure/functions";
 import { HttpRequest } from "@azure/functions";
 
 export async function greet(
-  context: Context,
+  _context: Context,
   request: HttpRequest
 ): Promise<any> {
   const name = extractName(request);
