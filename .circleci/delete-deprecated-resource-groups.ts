@@ -6,7 +6,7 @@ async function executeCommand(command: string): Promise<string> {
   return result.stdout.trim();
 }
 
-async function getRemoteBranchNames(): Promise<Array<string>> {
+async function getBranchNames(): Promise<Array<string>> {
   const prefixLength = "f47884521bf37f59bf0de7298989215ea4670311\trefs/heads/"
     .length;
   const rawResponse = await executeCommand("git ls-remote --heads --refs");
@@ -27,7 +27,7 @@ async function getGroupNames(): Promise<Array<string>> {
 }
 
 async function run() {
-  console.info(JSON.stringify(await getRemoteBranchNames(), undefined, 2));
+  console.info(JSON.stringify(await getBranchNames(), undefined, 2));
   console.info(JSON.stringify(await getGroupNames(), undefined, 2));
 }
 
