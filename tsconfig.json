@@ -1,7 +1,12 @@
 {
   "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
     "module": "commonjs",
     "moduleResolution": "node",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "outDir": "dist",
     "rootDir": "src",
     "sourceMap": true,

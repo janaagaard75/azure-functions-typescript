@@ -28,13 +28,28 @@
     },
     {
       "type": "Microsoft.Storage/storageAccounts",
-      "kind": "Storage",
+      "kind": "StorageV2",
       "name": "[variables('storageAccountName')]",
-      "apiVersion": "2018-02-01",
+      "apiVersion": "2019-04-01",
       "location": "[resourceGroup().location]",
       "sku": {
         "name": "Standard_LRS",
         "tier": "Standard"
+      }
+    },
+
+    {
+      "type": "Microsoft.Storage/storageAccounts/blobServices",
+      "name": "[concat(variables('storageAccountName'), '/default')]",
+      "apiVersion": "2018-07-01",
+      "dependsOn": [
+        "[concat('Microsoft.Storage/storageAccounts/', variables('storageAccountName'))]"
+      ],
+      "properties": {
+        "deleteRetentionPolicy": {
+          "enabled": true,
+          "days": 30
+        }
       }
     },
     {

@@ -3,8 +3,8 @@ import { HttpRequest } from "@azure/functions";
 import * as dayjs from "dayjs";
 
 export async function daystochristmas(
-  context: Context,
-  request: HttpRequest
+  _context: Context,
+  _request: HttpRequest
 ): Promise<any> {
   const now = dayjs(Date.now());
   let christmasEve = dayjs(`${now.year()}-12-24 23:59:59Z`);
