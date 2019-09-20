@@ -46,6 +46,10 @@ async function run() {
     console.info(`Deleting deprecated resource group ${group}.`);
     await executeCommand(`az group delete --name ${group} --yes`);
   });
+
+  if (groupsToDelete.length >= 1) {
+    console.info("This takes a few minutes...");
+  }
 }
 
 run();
