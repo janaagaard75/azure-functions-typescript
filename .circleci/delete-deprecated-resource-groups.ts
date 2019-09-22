@@ -37,17 +37,16 @@ async function run() {
     toResourceGroupName(branchName)
   );
   const actualGroups = await getGroupNames();
-
   const groupsToDelete = actualGroups.filter(
     group => !expectedGroups.includes(group) && group !== productionGroup
   );
 
-  groupsToDelete.forEach(async group => {
-    console.info(`Deleting deprecated resource group ${group}.`);
-    await executeCommand(`az group delete --name ${group} --yes`);
-  });
-
   if (groupsToDelete.length >= 1) {
+    groupsToDelete.forEach(async group => {
+      console.info(`Deleting deprecated resource group ${group}.`);
+      await executeCommand(`az group delete --name ${group} --yes`);
+    });
+
     console.info("This takes a few minutes...");
   }
 }
