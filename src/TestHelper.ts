@@ -17,10 +17,11 @@ export class TestHelper {
   }
 
   private static getApiRootUrl(): string {
-    const currentBranchName = this.runShellCommand(
+    const rawBranchName = this.runShellCommand(
       "git symbolic-ref --short HEAD"
     ).trim();
-    const resourceGroupName = `azure-functions-typescript-${currentBranchName}`;
+    const fixedBranchName = rawBranchName.replace(/[\.\/_]/g, "-");
+    const resourceGroupName = `azure-functions-typescript-${fixedBranchName}`;
     const resourcesInfo = this.runShellCommand(
       `${this.azCommand} resource list --resource-group ${resourceGroupName}`
     );
@@ -41,6 +42,8 @@ export class TestHelper {
   }
 
   private static runShellCommand(commandAndArguments: string): string {
+    console.info(`Running the command '${commandAndArguments}'.`);
+
     const [command, ...args] = commandAndArguments.split(" ");
     const response = spawnSync(command, args);
 
