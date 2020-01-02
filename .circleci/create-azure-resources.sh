@@ -10,6 +10,7 @@ fi
 
 # Create a resource group.
 resource_group_name="azure-functions-typescript-$1"
+resource_group_name=${resource_group_name/\//-}
 echo "Creating resource group $resource_group_name."
 az group create \
   --location "northeurope" \
