@@ -42,6 +42,8 @@ export class TestHelper {
   }
 
   private static runShellCommand(commandAndArguments: string): string {
+    console.info(`Running the command '${commandAndArguments}'.`);
+
     const [command, ...args] = commandAndArguments.split(" ");
     const response = spawnSync(command, args);
 
