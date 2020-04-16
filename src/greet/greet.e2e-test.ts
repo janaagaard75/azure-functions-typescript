@@ -17,7 +17,7 @@ describe("greet endpoint", () => {
     const requestBody = fs.readFileSync("src/greet/sample.dat").toString();
     const response = await fetch(`${TestHelper.apiRootUrl}/greet`, {
       body: requestBody,
-      method: "POST"
+      method: "POST",
     });
     expect(response.ok).toBe(true);
 

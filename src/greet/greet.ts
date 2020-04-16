@@ -9,12 +9,12 @@ export async function greet(
   if (name === undefined) {
     return {
       body: "Please pass a name on the query string or in the request body.",
-      status: 400
+      status: 400,
     };
   }
 
   return {
-    body: `Hello ${name}.`
+    body: `Hello ${name}.`,
   };
 }
 

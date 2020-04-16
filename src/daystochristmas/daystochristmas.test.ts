@@ -10,7 +10,7 @@ describe.each([
   ["2000-01-01", 358],
   ["2002-12-25", 364],
   ["2003-12-25", 365],
-  ["2004-12-25", 364]
+  ["2004-12-25", 364],
 ])("daystochristmas function", (date, daysToChristmasEve) => {
   test(`returns correct greeting number of days for '${date}'`, async () => {
     jest.spyOn(Date, "now").mockImplementation(() => new Date(date).getTime());

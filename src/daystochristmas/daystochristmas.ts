@@ -15,6 +15,6 @@ export async function daystochristmas(
   const days = christmasEve.diff(now, "day");
 
   return {
-    body: `There are ${days} day(s) to Christmas Eve.`
+    body: `There are ${days} day(s) to Christmas Eve.`,
   };
 }
