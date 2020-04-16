@@ -24,30 +24,30 @@
     "test-e2e-save-results": "cross-env JEST_JUNIT_OUTPUT=test-results/test-results-e2e.xml jest --ci --runInBand --reporters=default --reporters=jest-junit --testRegex \"\\.e2e-test\\.ts$\""
   },
   "dependencies": {
-    "dayjs": "1.8.16"
+    "dayjs": "1.8.24"
   },
   "devDependencies": {
-    "@azure/functions": "1.0.3",
-    "@fluffy-spoon/substitute": "1.89.0",
-    "@types/jest": "24.0.18",
-    "@types/node": "10.14.*",
-    "@types/node-fetch": "2.5.0",
-    "@typescript-eslint/eslint-plugin": "2.3.0",
-    "@typescript-eslint/parser": "2.3.0",
-    "azure-functions-core-tools": "2.7.1585",
-    "copyfiles": "2.1.1",
-    "cross-env": "6.0.0",
-    "eslint": "6.4.0",
-    "eslint-config-prettier": "6.3.0",
-    "eslint-plugin-prettier": "3.1.0",
-    "eslint-plugin-react": "7.14.3",
-    "jest": "24.9.0",
-    "jest-junit": "8.0.0",
+    "@azure/functions": "1.2.0",
+    "@fluffy-spoon/substitute": "1.130.0",
+    "@types/jest": "25.2.1",
+    "@types/node": "13.11.*",
+    "@types/node-fetch": "2.5.6",
+    "@typescript-eslint/eslint-plugin": "2.28.0",
+    "@typescript-eslint/parser": "2.28.0",
+    "azure-functions-core-tools": "2.7.2254",
+    "copyfiles": "2.2.0",
+    "cross-env": "7.0.2",
+    "eslint": "6.8.0",
+    "eslint-config-prettier": "6.10.1",
+    "eslint-plugin-prettier": "3.1.3",
+    "eslint-plugin-react": "7.19.0",
+    "jest": "25.3.0",
+    "jest-junit": "10.0.0",
     "node-fetch": "2.6.0",
-    "prettier": "1.18.2",
-    "rimraf": "3.0.0",
-    "ts-jest": "24.1.0",
-    "ts-node": "8.3.0",
-    "typescript": "3.6.3"
+    "prettier": "2.0.4",
+    "rimraf": "3.0.2",
+    "ts-jest": "25.3.1",
+    "ts-node": "8.8.2",
+    "typescript": "3.8.3"
   }
 }
