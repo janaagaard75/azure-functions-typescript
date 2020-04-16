@@ -27,9 +27,9 @@ export class TestHelper {
     );
     const resourceInfos = JSON.parse(resourcesInfo) as Array<ResourceInfo>;
     const functionsResourceName = resourceInfos
-      .map(resourceInfo => resourceInfo.name)
+      .map((resourceInfo) => resourceInfo.name)
       .find(
-        resourceName => resourceName.match(/^aft-(.*)-functions$/) !== null
+        (resourceName) => resourceName.match(/^aft-(.*)-functions$/) !== null
       );
 
     if (functionsResourceName === undefined) {
