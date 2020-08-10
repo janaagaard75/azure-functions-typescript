@@ -5,7 +5,7 @@ jobs:
   build:
     docker:
       # Match the version in azure-resource.json. See https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-node#node-version.
-      - image: circleci/node:10.14.1-stretch
+      - image: circleci/node:12-stretch
     steps:
       - checkout
       - restore_cache:
