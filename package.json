@@ -14,7 +14,7 @@
     "build": "yarn run clean && tsc && copyfiles --up 1 \"src/**/*.json\" dist && copyfiles package.json yarn.lock dist",
     "check-types": "yarn install && tsc --noEmit",
     "clean": "yarn install --frozen-lockfile && rimraf dist",
-    "delete-groups": "ts-node .circleci/delete-deprecated-resource-groups.ts",
+    "delete-groups": "ts-node .github/workflows/delete-deprecated-resource-groups.ts",
     "format": "prettier --write '{./,./src/**/}*.{js,json,ts}'",
     "lint": "eslint --format codeframe \"**/*.ts\" \"./*.js\"",
     "start": "yarn run build && (cd dist; func host start)",

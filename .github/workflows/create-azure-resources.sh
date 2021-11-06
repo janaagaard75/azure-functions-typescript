@@ -20,7 +20,7 @@ az group create \
 script_folder="$( cd "$(dirname ${BASH_SOURCE[0]})"; pwd -P )"
 template_file=$script_folder/azure-resources.json
 now=`date +"%Y%m%d-%H%M%S"`
-deployment_name="CircleCI-$now"
+deployment_name="GithubActions-$now"
 echo "Creating resources in resource group $resource_group_name with deployment $deployment_name."
 az group deployment create \
   --mode Complete \

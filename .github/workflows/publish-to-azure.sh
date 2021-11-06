@@ -9,9 +9,10 @@ if [[ $# -eq 0 ]]; then
 fi
 
 script_folder="$( cd "$(dirname ${BASH_SOURCE[0]})"; pwd -P )"
-cd $script_folder/../dist
+root_folder="$script_folder/../.."
+cd $root_folder/dist
 
-func_command="$script_folder/../node_modules/.bin/func"
+func_command="$root_folder/node_modules/.bin/func"
 resource_group_name="azure-functions-typescript-$1"
 resource_group_name=${resource_group_name//[\.\/_]/-}
 # There is probably a simpler way to extract functions_name from the returned JSON.
