@@ -20,8 +20,11 @@ export class TestHelper {
     const rawBranchName = this.runShellCommand(
       "git symbolic-ref --short HEAD"
     ).trim();
+    console.info(`rawBranchName: ${rawBranchName}`);
     const fixedBranchName = rawBranchName.replace(/[\.\/_]/g, "-");
+    console.info(`fixedBranchName: ${fixedBranchName}`);
     const resourceGroupName = `azure-functions-typescript-${fixedBranchName}`;
+    console.info(`resourceGroupName: ${resourceGroupName}`);
     const resourcesInfo = this.runShellCommand(
       `${this.azCommand} resource list --resource-group ${resourceGroupName}`
     );
