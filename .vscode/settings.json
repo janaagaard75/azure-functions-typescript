@@ -35,5 +35,8 @@
     "obj": true
   },
   "jest.debugCodeLens.showWhenTestStateIn": ["fail", "pass", "skip", "unknown"],
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  }
 }
