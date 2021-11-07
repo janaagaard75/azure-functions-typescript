@@ -17,6 +17,7 @@ export class TestHelper {
   }
 
   private static getApiRootUrl(): string {
+    // TODO: Fix/replace this code. It doesn't work in GitHub Actions. @actions/exec (https://github.com/actions/toolkit/tree/main/packages/exec) might be a solution for this.
     const rawBranchName = this.runShellCommand(
       "git symbolic-ref --short HEAD"
     ).trim();
