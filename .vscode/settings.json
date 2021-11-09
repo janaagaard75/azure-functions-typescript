@@ -38,6 +38,7 @@
     "obj": true
   },
   "jest.debugCodeLens.showWhenTestStateIn": ["fail", "pass", "skip", "unknown"],
+  "jest.jestCommandLine": "yarn jest",
   "typescript.tsdk": "node_modules/typescript/lib",
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
