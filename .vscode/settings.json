@@ -28,6 +28,9 @@
     "serviceplan"
   ],
   "debug.internalConsoleOptions": "neverOpen",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
   "files.exclude": {

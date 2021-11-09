@@ -1,5 +1,4 @@
-import { Context } from "@azure/functions";
-import { HttpRequest } from "@azure/functions";
+import { Context, HttpRequest } from "@azure/functions";
 import { Substitute } from "@fluffy-spoon/substitute";
 import { greet } from "./greet";
 
