@@ -9,7 +9,7 @@ if [[ $# -eq 0 ]]; then
 fi
 
 script_folder="$( cd "$(dirname ${BASH_SOURCE[0]})"; pwd -P )"
-root_folder="$script_folder/../.."
+root_folder="$script_folder/../../.."
 cd $root_folder/dist
 
 func_command="$root_folder/node_modules/.bin/func"
