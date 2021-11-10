@@ -57,13 +57,13 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Create or update Azure resources
-        run: ./.github/workflows/create-azure-resources.sh ${GITHUB_HEAD_REF}
+        run: ./.github/workflows/create-azure-resources.sh ${{ env.BRANCH_NAME }}
 
       - name: Install production Node modules
         run: (cd dist; yarn install --frozen-lockfile --production)
 
       - name: Publish code to Azure
-        run: ./.github/workflows/publish-to-azure.sh ${GITHUB_HEAD_REF}
+        run: ./.github/workflows/publish-to-azure.sh ${{ env.BRANCH_NAME }}
 
       - name: Run end-to-end tests
         run: yarn run test-e2e-save-results
