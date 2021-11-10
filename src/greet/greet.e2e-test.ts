@@ -4,9 +4,8 @@ import { TestHelper } from "../TestHelper";
 
 describe("greet endpoint", () => {
   test("returns correct greeting when using GET", async () => {
-    const response = await fetch(
-      `${TestHelper.apiRootUrl}/greet?name=Jan+Aagaard`
-    );
+    const apiRootUrl = await TestHelper.getApiRootUrl();
+    const response = await fetch(`${apiRootUrl}/greet?name=Jan+Aagaard`);
     expect(response.ok).toBe(true);
 
     const responseBody = await response.text();
@@ -15,7 +14,8 @@ describe("greet endpoint", () => {
 
   test("return correct greeting when using POST", async () => {
     const requestBody = fs.readFileSync("src/greet/sample.dat").toString();
-    const response = await fetch(`${TestHelper.apiRootUrl}/greet`, {
+    const apiRootUrl = await TestHelper.getApiRootUrl();
+    const response = await fetch(`${apiRootUrl}/greet`, {
       body: requestBody,
       method: "POST",
     });
@@ -26,7 +26,8 @@ describe("greet endpoint", () => {
   });
 
   test("return error when name not specified", async () => {
-    const response = await fetch(`${TestHelper.apiRootUrl}/greet`);
+    const apiRootUrl = await TestHelper.getApiRootUrl();
+    const response = await fetch(`${apiRootUrl}/greet`);
     expect(response.ok).toBe(false);
     expect(response.status).toBe(400);
 

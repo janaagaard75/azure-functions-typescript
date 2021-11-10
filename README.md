@@ -19,11 +19,9 @@ Yarn is a better npm. I am especially a fan of the really fast installs on a sys
 
     brew install yarn
 
-### Accounts at GitHub, CircleCI and Azure
+### Accounts at GitHub and Azure
 
-A GitHub account. You can create one for free at <https://github.com/>. CircleCI also works with [Bitbucket](https://bitbucket.com), but I haven't tried that, so I don't know if there are any differences from using it with GitHub.
-
-A CircleCI account. You can create on for free at <https://circleci.com/>. You sign in to CircleCI with your GitHub account, so create that one first.
+A GitHub account. You can create one for free at <https://github.com/>.
 
 An Azure account. You can create one for free at <https://portal.azure.com/>.
 
@@ -47,9 +45,9 @@ Lint the code. If you're using VSCode and have the recommended extension install
 
 ## Continuous Deployment
 
-Continuous deployment is done with [CircleCI](https://circleci.com/), and configured in `config.yml`.
+Continuous deployment is done with [GitHub Actions](https://docs.github.com/en/actions), and configured in `validate-and-publish.yml`.
 
-The run scripts `test-save-results` and `test-e2e-save-results` run the same tests as their counterparts without the `-save-results` postfix, but stores the result in a `test-results` folder so that CircleCI can display a summary.
+The run scripts `test-save-results` and `test-e2e-save-results` run the same tests as their counterparts without the `-save-results` postfix, but stores the result in a `test-results` folder so that the GitHub Action can display a summary.
 
 ## Casting to `any` in Tests
 

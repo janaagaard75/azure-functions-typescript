@@ -3,7 +3,8 @@ import { TestHelper } from "../TestHelper";
 
 describe("daystochristmas endpoint", () => {
   test("returns correct an answer", async () => {
-    const response = await fetch(`${TestHelper.apiRootUrl}/daystochristmas`);
+    const apiRootUrl = await TestHelper.getApiRootUrl();
+    const response = await fetch(`${apiRootUrl}/daystochristmas`);
     expect(response.ok).toBe(true);
 
     const responseBody = await response.text();
