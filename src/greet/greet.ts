@@ -28,11 +28,11 @@ function extractName(request: HttpRequest): string | undefined {
 }
 
 function getNameFromQueryOrBody(request: HttpRequest): string {
-  if (request.query.name) {
+  if (request.query.name !== undefined) {
     return request.query.name;
   }
 
-  if (request.body && request.body.name) {
+  if (typeof request.body.name === "string") {
     return request.body.name;
   }
 
