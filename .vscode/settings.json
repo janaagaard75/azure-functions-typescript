@@ -6,28 +6,31 @@
   "azureFunctions.projectSubpath": "dist",
   "azureFunctions.templateFilter": "Verified",
   "cSpell.words": [
-    "Bitbucket",
-    "CONTENTAZUREFILECONNECTIONSTRING",
-    "CONTENTSHARE",
-    "INSTRUMENTATIONKEY",
-    "MSDEPLOY",
     "aagaard",
     "appinsights",
-    "circleci",
+    "Bitbucket",
     "codeframe",
+    "CONTENTAZUREFILECONNECTIONSTRING",
+    "CONTENTSHARE",
     "copyfiles",
+    "creds",
     "dayjs",
     "daystochristmas",
     "functionapp",
+    "INSTRUMENTATIONKEY",
     "junit",
     "lockfile",
     "memoized",
+    "MSDEPLOY",
     "promisify",
     "readonly",
     "serverfarms",
     "serviceplan"
   ],
   "debug.internalConsoleOptions": "neverOpen",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
   "files.exclude": {
@@ -35,5 +38,9 @@
     "obj": true
   },
   "jest.debugCodeLens.showWhenTestStateIn": ["fail", "pass", "skip", "unknown"],
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "jest.jestCommandLine": "yarn jest",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  }
 }

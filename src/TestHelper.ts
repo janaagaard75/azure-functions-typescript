@@ -1,4 +1,4 @@
-import { spawnSync } from "child_process";
+import { getExecOutput } from "@actions/exec";
 import * as process from "process";
 
 interface ResourceInfo {
@@ -8,21 +8,23 @@ interface ResourceInfo {
 export class TestHelper {
   private static memoizedApiRootUrl: string;
 
-  public static get apiRootUrl(): string {
+  public static async getApiRootUrl(): Promise<string> {
     if (this.memoizedApiRootUrl === undefined) {
-      this.memoizedApiRootUrl = this.getApiRootUrl();
+      this.memoizedApiRootUrl = await this.computeApiRootUrl();
     }
 
     return this.memoizedApiRootUrl;
   }
 
-  private static getApiRootUrl(): string {
-    const rawBranchName = this.runShellCommand(
-      "git symbolic-ref --short HEAD"
-    ).trim();
+  private static async computeApiRootUrl(): Promise<string> {
+    const rawBranchName = await this.getCurrentBranchName();
+    if (rawBranchName === "") {
+      throw new Error("Could not determine the name of the current branch.");
+    }
+
     const fixedBranchName = rawBranchName.replace(/[\.\/_]/g, "-");
     const resourceGroupName = `azure-functions-typescript-${fixedBranchName}`;
-    const resourcesInfo = this.runShellCommand(
+    const resourcesInfo = await this.runShellCommand(
       `${this.azCommand} resource list --resource-group ${resourceGroupName}`
     );
     const resourceInfos = JSON.parse(resourcesInfo) as Array<ResourceInfo>;
@@ -41,23 +43,32 @@ export class TestHelper {
     return `https://${functionsResourceName}.azurewebsites.net/api`;
   }
 
-  private static runShellCommand(commandAndArguments: string): string {
+  private static async getCurrentBranchName(): Promise<string> {
+    if (process.env.BRANCH_NAME !== undefined) {
+      return process.env.BRANCH_NAME;
+    }
+
+    return (await this.runShellCommand("git branch --show-current")).trim();
+  }
+
+  private static async runShellCommand(
+    commandAndArguments: string
+  ): Promise<string> {
     console.info(`Running the command '${commandAndArguments}'.`);
 
     const [command, ...args] = commandAndArguments.split(" ");
-    const response = spawnSync(command, args);
+    const response = await getExecOutput(command, args);
 
-    if (response.stdout === null) {
-      let errorMessage = `Error running '${command}'`;
-      if (response.stderr !== null) {
-        errorMessage += `: ${response.stderr}`;
+    if (response.exitCode !== 0) {
+      let errorMessage = `Error running '${command}', exited with code ${response.exitCode}.`;
+      if (response.stderr !== "") {
+        errorMessage += ` Error: ${response.stderr}`;
       }
-      errorMessage += ".";
 
       throw new Error(errorMessage);
     }
 
-    return response.stdout.toString();
+    return response.stdout;
   }
 
   private static get azCommand(): string {
