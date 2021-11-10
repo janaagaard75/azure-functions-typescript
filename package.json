@@ -38,7 +38,7 @@
     "@types/node-fetch": "^2.5.12",
     "@typescript-eslint/eslint-plugin": "^5.3.1",
     "@typescript-eslint/parser": "^5.3.1",
-    "azure-functions-core-tools": "^2.7.3188",
+    "azure-functions-core-tools": "^3.0.3904",
     "babel-jest": "^27.3.1",
     "copyfiles": "^2.4.1",
     "cross-env": "^7.0.3",

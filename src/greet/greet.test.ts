@@ -5,7 +5,7 @@ import { greet } from "./greet";
 describe.each([
   ["Jan Aagaard", "Hello Jan Aagaard."],
   ["", "Please pass a name on the query string or in the request body."],
-  [null, "Please pass a name on the query string or in the request body."],
+  [undefined, "Please pass a name on the query string or in the request body."],
   [" ", "Please pass a name on the query string or in the request body."],
 ])("greet function", (name, greeting) => {
   test(`returns correct greeting for '${name}' in the query`, async () => {
