@@ -32,7 +32,7 @@ function getNameFromQueryOrBody(request: HttpRequest): string {
     return request.query.name;
   }
 
-  if (typeof request.body.name === "string") {
+  if (request.body?.name !== undefined && request.body?.name !== null) {
     return request.body.name;
   }
 
