@@ -28,10 +28,12 @@ function extractName(request: HttpRequest): string | undefined {
 }
 
 function getNameFromQueryOrBody(request: HttpRequest): string {
+  // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
   if (request.query.name) {
     return request.query.name;
   }
 
+  // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
   if (request.body && request.body.name) {
     return request.body.name;
   }
