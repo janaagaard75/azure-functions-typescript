@@ -29,6 +29,9 @@
   "devDependencies": {
     "@actions/exec": "^1.1.0",
     "@azure/functions": "^1.2.3",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "@babel/preset-typescript": "^7.16.0",
     "@fluffy-spoon/substitute": "^1.208.0",
     "@types/jest": "^27.0.2",
     "@types/node": "^16.11.7",
@@ -36,6 +39,7 @@
     "@typescript-eslint/eslint-plugin": "^5.3.1",
     "@typescript-eslint/parser": "^5.3.1",
     "azure-functions-core-tools": "^2.7.3188",
+    "babel-jest": "^27.3.1",
     "copyfiles": "^2.4.1",
     "cross-env": "^7.0.3",
     "eslint": "^8.2.0",
