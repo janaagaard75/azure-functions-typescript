@@ -36,7 +36,7 @@ export class TestHelper {
 
     if (functionsResourceName === undefined) {
       throw new Error(
-        `Could not a functions resources in the resource group '${resourceGroupName}'.`
+        `Could not find a functions resources in the resource group '${resourceGroupName}'.`
       );
     }
 
