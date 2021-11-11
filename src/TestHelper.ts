@@ -6,7 +6,7 @@ interface ResourceInfo {
 }
 
 export class TestHelper {
-  private static memoizedApiRootUrl: string;
+  private static memoizedApiRootUrl: string | undefined;
 
   public static async getApiRootUrl(): Promise<string> {
     if (this.memoizedApiRootUrl === undefined) {
@@ -22,7 +22,7 @@ export class TestHelper {
       throw new Error("Could not determine the name of the current branch.");
     }
 
-    const fixedBranchName = rawBranchName.replace(/[\.\/_]/g, "-");
+    const fixedBranchName = rawBranchName.replace(/[./_]/g, "-");
     const resourceGroupName = `azure-functions-typescript-${fixedBranchName}`;
     const resourcesInfo = await this.runShellCommand(
       `${this.azCommand} resource list --resource-group ${resourceGroupName}`
