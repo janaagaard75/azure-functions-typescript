@@ -28,13 +28,13 @@ function extractName(request: HttpRequest): string | undefined {
 }
 
 function getNameFromQueryOrBody(request: HttpRequest): string {
-  // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
-  if (request.query.name) {
+  // 'query' might be undefined - there is an error in the type system.
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+  if (request.query !== undefined && request.query.name !== undefined) {
     return request.query.name;
   }
 
-  // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
-  if (request.body && request.body.name) {
+  if (request.body !== undefined && request.body.name !== undefined) {
     return request.body.name;
   }
 
