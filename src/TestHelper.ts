@@ -54,8 +54,6 @@ export class TestHelper {
   private static async runShellCommand(
     commandAndArguments: string
   ): Promise<string> {
-    console.info(`Running the command '${commandAndArguments}'.`);
-
     const [command, ...args] = commandAndArguments.split(" ");
     const response = await getExecOutput(command, args);
 
