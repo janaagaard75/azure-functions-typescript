@@ -33,7 +33,7 @@ describe("greet endpoint", () => {
 
     const responseBody = await response.text();
     expect(responseBody).toBe(
-      "Please pass a name on the query string or in the request body."
+      "Please pass a name on the query string or in the request body, e.g. greet?name=John."
     );
   });
 });

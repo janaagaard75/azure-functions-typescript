@@ -4,9 +4,18 @@ import { greet } from "./greet";
 
 describe.each([
   ["Jan Aagaard", "Hello Jan Aagaard."],
-  ["", "Please pass a name on the query string or in the request body."],
-  [undefined, "Please pass a name on the query string or in the request body."],
-  [" ", "Please pass a name on the query string or in the request body."],
+  [
+    "",
+    "Please pass a name on the query string or in the request body, e.g. greet?name=John.",
+  ],
+  [
+    undefined,
+    "Please pass a name on the query string or in the request body, e.g. greet?name=John.",
+  ],
+  [
+    " ",
+    "Please pass a name on the query string or in the request body, e.g. greet?name=John.",
+  ],
 ])("greet function", (name, greeting) => {
   test(`returns correct greeting for '${name}' in the query`, async () => {
     const request = Substitute.for<HttpRequest>();
