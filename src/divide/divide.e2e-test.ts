@@ -10,4 +10,14 @@ describe("divide endpoint", () => {
     const responseBody = await response.text();
     expect(responseBody).toBe("5.5/2.5 is 2.2.");
   });
+
+  test("returns 400 Bad Request if trying to divide by zero.", async () => {
+    const apiRootUrl = await TestHelper.getApiRootUrl();
+    const response = await fetch(`${apiRootUrl}/divide/1/0`);
+    expect(response.ok).toBe(false);
+    expect(response.status).toBe(400);
+
+    const responseBody = await response.text();
+    expect(responseBody).toBe("Cannot divide by zero.");
+  });
 });
