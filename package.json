@@ -17,7 +17,7 @@
     "delete-groups": "ts-node .github/workflows/delete-deprecated-resource-groups.ts",
     "format": "prettier --write '{./,./src/**/}*.{js,json,ts}'",
     "lint": "eslint --format unix \"**/*.ts\"",
-    "start": "yarn run build && (cd dist; func host start)",
+    "start": "yarn run build && cd dist && bash ../node_modules/.bin/func host start",
     "test": "jest --testRegex \"\\.test\\.ts$\"",
     "test-save-results": "cross-env JEST_JUNIT_OUTPUT=test-results/test-results-local.xml jest --ci --runInBand --reporters=default --reporters=jest-junit --testRegex \"\\.test\\.ts$\"",
     "test-e2e": "jest --testRegex \"\\.e2e-test\\.ts$\"",
