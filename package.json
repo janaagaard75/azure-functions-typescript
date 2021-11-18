@@ -15,7 +15,6 @@
     "check-types": "yarn install && tsc --noEmit",
     "clean": "yarn install --frozen-lockfile && rimraf dist",
     "delete-groups": "ts-node .github/workflows/delete-deprecated-resource-groups.ts",
-    "format": "prettier --write '{./,./src/**/}*.{js,json,ts}'",
     "lint": "eslint --format unix \"**/*.ts\"",
     "start": "yarn run build && cd dist && bash ../node_modules/.bin/func host start",
     "test": "jest --testRegex \"\\.test\\.ts$\"",
