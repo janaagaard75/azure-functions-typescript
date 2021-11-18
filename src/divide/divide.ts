@@ -4,8 +4,8 @@ export async function divide(
   context: Context,
   _request: HttpRequest
 ): Promise<any> {
-  const dividend = Number.parseFloat(context.bindingData.dividend);
-  const devisor = Number.parseFloat(context.bindingData.devisor);
+  const dividend = Number(context.bindingData.dividend);
+  const devisor = Number(context.bindingData.devisor);
 
   if (isNaN(dividend) || isNaN(devisor)) {
     return {
