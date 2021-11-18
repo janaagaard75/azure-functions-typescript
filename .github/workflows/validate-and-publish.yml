@@ -62,6 +62,11 @@ jobs:
       - name: Install production Node modules
         run: (cd dist; yarn install --frozen-lockfile --production)
 
+      - name: Wait to make sure the Azure Function is ready
+        uses: juliangruber/sleep-action@v1
+        with:
+          time: 10s
+
       - name: Publish code to Azure
         run: ./.github/workflows/publish-to-azure.sh ${{ env.BRANCH_NAME }}
 
