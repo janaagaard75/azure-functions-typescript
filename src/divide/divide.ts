@@ -14,6 +14,13 @@ export async function divide(
     };
   }
 
+  if (devisor === 0) {
+    return {
+      body: "Cannot divide by zero.",
+      status: 400,
+    };
+  }
+
   const fraction = dividend / devisor;
 
   return {
