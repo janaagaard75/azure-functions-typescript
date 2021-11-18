@@ -1,0 +1,20 @@
+{
+  "disabled": false,
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "direction": "in",
+      "methods": ["get"],
+      "name": "request",
+      "route": "divide/{dividend}/{devisor}",
+      "type": "httpTrigger"
+    },
+    {
+      "direction": "out",
+      "name": "$return",
+      "type": "http"
+    }
+  ],
+  "entryPoint": "divide",
+  "scriptFile": "divide.js"
+}
