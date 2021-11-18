@@ -6,7 +6,7 @@
       "direction": "in",
       "methods": ["get"],
       "name": "request",
-      "route": "divide/{dividend:int}/{devisor:int}",
+      "route": "divide/{dividend}/{devisor}",
       "type": "httpTrigger"
     },
     {

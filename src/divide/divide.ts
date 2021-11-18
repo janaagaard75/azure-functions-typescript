@@ -9,14 +9,7 @@ export async function divide(
 
   if (isNaN(dividend) || isNaN(devisor)) {
     return {
-      body: "Please pass a dividend and divisor in the query string, e.g. divide/6/2.5",
-      status: 400,
-    };
-  }
-
-  if (devisor === 0) {
-    return {
-      body: "Cannot divide by zero.",
+      body: "Please pass a dividend and divisor in the query string, e.g. divide/5.5/2",
       status: 400,
     };
   }
